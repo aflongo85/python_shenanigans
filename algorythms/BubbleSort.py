@@ -99,11 +99,3 @@ If the list contains objects and you want to copy them as well, use generic copy
 import copy
 new_list = copy.deepcopy(old_list)
 '''
-
-set1 = {14, 5, 9, 31, 12, 77, 67, 8}
-set2 = {5, 77, 9, 12}
-
-print(set1.intersection(set2))
-
-my_tuple = (20)
-print(my_tuple)
