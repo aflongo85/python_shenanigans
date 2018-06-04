@@ -19,3 +19,30 @@ def func_to_be_decorated():
 
 
 func_to_be_decorated()
+
+
+
+
+def decorator_with_parameters(password):
+    def a_decorator(func):
+        @functools.wraps(func)
+        def function_wrapper():
+            if password == "ciao":
+                func()
+                print("OK - Permission granted")
+            else:
+                print("Invalid Password")
+        return function_wrapper
+    return a_decorator
+
+
+
+
+@decorator_with_parameters("ciao")
+def my_admin_function():
+    print("I want to change important things")
+
+
+my_admin_function()
+
+
